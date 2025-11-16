@@ -1,0 +1,33 @@
+# Large model files
+Metacritic/models/rf.joblib
+Metacritic/models/rf_refined.joblib
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Model artifacts (optional - uncomment if you want to exclude all model files)
+# *.joblib
+# *.pkl
+# *.h5

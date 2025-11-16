@@ -1,0 +1,2 @@
+mae,rmse,r2,best_params
+7.46695733740228,9.66618601787047,0.3531824177076387,"{'rf__n_estimators': 500, 'rf__min_samples_split': 10, 'rf__min_samples_leaf': 3, 'rf__max_features': 'sqrt', 'rf__max_depth': 60, 'rf__bootstrap': False}"

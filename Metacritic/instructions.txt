@@ -1,0 +1,85 @@
+===========================================
+TRAINING MODELS
+===========================================
+
+# Train Ridge Regression model
+python train_and_save.py --model ridge
+
+# Train Random Forest model
+python train_and_save.py --model rf
+
+# Train LightGBM model
+python train_and_save.py --model lgbm
+
+# Train XGBoost model
+python train_and_save.py --model xgb
+
+
+===========================================
+TESTING MODELS (60% train, 40% test)
+===========================================
+
+# Test Ridge model
+python test_model.py --model ridge.joblib
+
+# Test Random Forest model
+python test_model.py --model rf.joblib
+
+# Test LightGBM model
+python test_model.py --model lgbm.joblib
+
+# Test XGBoost model
+python test_model.py --model xgb.joblib
+
+# Test Tuned Random Forest Model
+python test_model.py --model tuned_rf.joblib
+
+===========================================
+EXPECTED FILE OUTPUTS
+===========================================
+
+Models will be saved in:
+models/
+    ridge_model.joblib
+    rf_model.joblib
+    lgbm_model.joblib
+    xgb_model.joblib
+
+Results will be saved in:
+results/
+    ridge_model_results.csv
+    rf_model_results.csv
+    lgbm_model_results.csv
+    xgb_model_results.csv
+
+
+===========================================
+🔧 OPTIONAL — RUN ALL & LOG OUTPUT
+===========================================
+
+# Train everything and log outputs
+python train_and_save.py --model ridge  | tee logs/ridge_train.log
+python train_and_save.py --model rf     | tee logs/rf_train.log
+python train_and_save.py --model lgbm   | tee logs/lgbm_train.log
+python train_and_save.py --model xgb    | tee logs/xgb_train.log
+
+# Test everything and log outputs
+python test_model.py --model ridge_model.joblib | tee logs/ridge_test.log
+python test_model.py --model rf_model.joblib    | tee logs/rf_test.log
+python test_model.py --model lgbm_model.joblib  | tee logs/lgbm_test.log
+python test_model.py --model xgb_model.joblib   | tee logs/xgb_test.log
+
+===========================================
+END
+===========================================
+
+
+python explain_model.py --model models/ridge.joblib
+python explain_model.py --model models/rf.joblib
+python explain_model.py --model models/xgb.joblib
+python explain_model.py --model models/lgbm.joblib
+
+
+python explain_advanced.py --model models/rf.joblib
+python explain_advanced.py --model models/xgb.joblib
+python explain_advanced.py --model models/lgbm.joblib
